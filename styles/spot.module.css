@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url("../public/boite\ livre.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.button {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.input {
+  padding: 15px;
+  width: 70%;
+  text-align: center;
+}
+
+.modal {
+  padding: 20px;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.61);
+  width: 20%;
+  border-radius: 10px;
+}
