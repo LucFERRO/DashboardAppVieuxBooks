@@ -48,10 +48,23 @@
   background: url("../public/mega alakazam.gif");
 }
 
+.containerShadowball {
+  height: 20em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .shadowBall {
     height: 20em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.thunders{
+position: absolute;
+}
+
+.thunders > img {
+  position: absolute;
+  transform: translate(-25%, -35%);
 }

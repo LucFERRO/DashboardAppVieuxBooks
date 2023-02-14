@@ -5,7 +5,7 @@ import Image from 'next/image'
 function MyApp({ Component, pageProps }) {
     return <>
         <Head>
-            <title>TEMPLATENEXT</title>
+            <title>Dashboard App vieux Books</title>
             <link rel="icon" href="snorlax.gif" type="image/gif" />
         </Head>
         <Component {...pageProps} />
