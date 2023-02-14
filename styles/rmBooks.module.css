@@ -1,0 +1,23 @@
+.page {
+    background: url("../public/livreFeu.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.541);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 20%;
+    height: 30%;
+    border-radius: 10px;
+}

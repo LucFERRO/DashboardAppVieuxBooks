@@ -24,8 +24,8 @@ export const apiService = {
         return axios
             .put(`${url}/api/${ressource}`, data)
     },
-    delete(ressource, data) {
+    delete(ressource) {
         return axios
-            .delete(`${url}/api/${ressource}`, data)
+            .delete(`${url}/api/${ressource}`)
     },
 }

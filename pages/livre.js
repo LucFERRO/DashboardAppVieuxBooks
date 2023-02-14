@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from '../styles/livre.module.css'
 import {apiService} from '../service/ApiService'
+import Link from 'next/link'
 
 export default function livre() {
 
@@ -17,7 +18,6 @@ export default function livre() {
 
   async function createBook(){
     const data = await apiService.post("books", state);
-
   }
 
 
@@ -50,7 +50,7 @@ export default function livre() {
 
         </select>
         <button className={styles.button} onClick={createBook}>valider</button>
-
+        <button><Link href="/choice">Retour</Link></button>
         </div>
     </div>
   )
