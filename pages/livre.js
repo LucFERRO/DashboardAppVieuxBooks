@@ -16,8 +16,9 @@ export default function livre() {
     }))
   }
 
-  async function createBook(){
+  async function createBook(e){
     const data = await apiService.post("books", state);
+    window.location.reload()
   }
 
 
@@ -40,8 +41,8 @@ export default function livre() {
   return (
     <div className={styles.body}>
         <div className={styles.container}>
-        <input type="text" placeholder="name" name='name'  onChange={handleChange}/>
-        <input type="text" placeholder="Auteur" name='author' onChange={handleChange}/>
+        <input type="text" placeholder="name" name='name'  onChange={handleChange} value={state?.name}/>
+        <input type="text" placeholder="Auteur" name='author' onChange={handleChange} value={state?.author}/>
         <select name='spot_id' onChange={handleChange}>
           <option selected hidden>--Choisissez une adresse--</option>
           {spots.map((spot, index) => {
@@ -49,7 +50,8 @@ export default function livre() {
           })}
 
         </select>
-        <button className={styles.button} onClick={createBook}>valider</button>
+        <input type={"submit"} className={styles.button} onClick={(e) => createBook(e)}></input>
+        {/* <input type='submit' className={styles.button} onClick={createBook}>valider</input> */}
         <button><Link href="/choice">Retour</Link></button>
         </div>
     </div>

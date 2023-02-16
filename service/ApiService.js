@@ -11,7 +11,7 @@ export const apiService = {
     },
     login(logs) {
         return axios
-            .post(`${url}/api/auth/login`, logs)
+            .post(`${url}/api/list`, logs)
     },
     get(ressource) {
         return axios.get(`${url}/api/${ressource}`)

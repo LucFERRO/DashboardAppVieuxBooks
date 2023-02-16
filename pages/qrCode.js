@@ -52,6 +52,9 @@ export default function qrCode() {
           <button>
             <Link href="/choice">Retour</Link>
           </button>
+          <button>
+              <Link href="/qrMembre">qrCode personne</Link>
+            </button>
         </div>
       </div>
     );

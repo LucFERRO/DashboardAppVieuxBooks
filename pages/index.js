@@ -1,13 +1,14 @@
 import styles from "../styles/Home.module.css";
 import shadowBall from "../public/shadowBall.png";
 import alakazam from "../public/mega alakazam.gif";
-import Link from "next/link";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import thunder0 from "../public/gsap/thunder0.png";
 import thunder1 from "../public/gsap/thunder1.png";
 import thunder2 from "../public/gsap/thunder2.png";
+import { apiService } from "../service/ApiService";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home() {
   const shadowBallRef = useRef(null);
@@ -80,14 +81,33 @@ export default function Home() {
         })
   }, []);
 
+  const [state, setState] = useState(null);
+
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setState(user => ({
+      ...user, [name]: value
+    }))
+  }
+
+  async function login(){
+    const data = await apiService.login(state);
+    if(data.data){
+      window.location = '/choice'
+    }
+  }
+
+
   return (
     <div className={styles.page}>
       <div className={styles.row}>
         <div className={styles.container}>
-          <input type="text" placeholder="Identifiant" />
-          <input type="text" maxLength={4} placeholder="Code PIN" />
-          <button>
-            <Link href="/choice">Connexion</Link>
+          <input type="text" placeholder="Identifiant" name="name" onChange={handleChange}/>
+          <input type="text" maxLength={10} name="code" placeholder="Code PIN" onChange={handleChange}/>
+          <button onClick={login}>
+            {/* <Link href="/choice">Connexion</Link> */}
+            Connexion
           </button>
         </div>
         <div className={styles.containerShadowball}>
