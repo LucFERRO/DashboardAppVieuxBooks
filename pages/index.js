@@ -5,15 +5,28 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
+import thunder0 from "../public/gsap/thunder0.png";
 import thunder1 from "../public/gsap/thunder1.png";
+import thunder2 from "../public/gsap/thunder2.png";
 
 export default function Home() {
   const shadowBallRef = useRef(null);
+  const thunder0Ref = useRef(null);
   const ThunderRef = useRef(null);
   const thunder1Ref = useRef(null);
   const thunder1Ref2 = useRef(null);
   const thunder1Ref3 = useRef(null);
   const thunder1Ref4 = useRef(null);
+  const thunder1Ref5 = useRef(null);
+  const thunder1Ref6 = useRef(null);
+
+  const thunder2Ref = useRef(null);
+  const thunder2Ref2 = useRef(null);
+  const thunder2Ref3 = useRef(null);
+  const thunder2Ref4 = useRef(null);
+  const thunder2Ref5 = useRef(null);
+  const thunder2Ref6 = useRef(null);
+
 
   useEffect(() => {
     gsap.fromTo(
@@ -29,42 +42,42 @@ export default function Home() {
       }
     );
 
-    // gsap.fromTo(
-    //   thunder1Ref.current,
-    //   {
-    //     rotate: 0,
-    //     scale:0
-    //   },
-    //   {
-    //     rotate: -360,
-    //     repeat: -1,
-    //     duration: 2,
-    //     ease: "none",
-    //     transformOrigin:"56% 0%",
-    //     scale: .5,
-    //     // yoyo: true
-    //   }
-    // );
-    gsap.timeline()
-      .fromTo(ThunderRef.current.children ,{
+    gsap.fromTo(
+      thunder0Ref.current,
+      {
+        rotate: 0,
+        opacity: .4,
+      },
+      {
+        rotate: -360,
+        repeat: -1,
+        duration: 2,
+        ease: "none",
+        opacity: .1
+        // yoyo: true
+      }
+    );
 
-            rotate: 0,
-            scale:0,
-            opacity: 3
-          },
-          {
-            transformOrigin:"56% 0%",
-            repeat: -1,
-            repeatRefresh: true,
-            ease: "none",
-            duration: 2,
-            stagger:"random(0.2, 5)",
-            delay:"random(0.2, 5)",
-            rotate: "random(-360, 360)",
-            scale: .5,
-            opacity: 0
-            // yoyo: true
-          })
+    gsap.timeline()
+      .fromTo(ThunderRef.current.children, {
+
+        rotate: 0,
+        scale: 0,
+        opacity: 3
+      },
+        {
+          transformOrigin: "56% 0%",
+          repeat: -1,
+          repeatRefresh: true,
+          ease: "none",
+          duration: 2,
+          stagger: "random(0.2, 5)",
+          delay: "random(0.2, 5)",
+          rotate: "random(-360, 360)",
+          scale: .5,
+          opacity: 0
+          // yoyo: true
+        })
   }, []);
 
   return (
@@ -83,11 +96,27 @@ export default function Home() {
             src={shadowBall.src}
             className={styles.shadowBall}
           ></img>
+
+            <img ref={thunder0Ref} src={thunder0.src}  className={styles.thunderRings}></img>
+
           <div ref={ThunderRef} className={styles.thunders}>
+
+
             <img ref={thunder1Ref} src={thunder1.src}></img>
             <img ref={thunder1Ref2} src={thunder1.src}></img>
             <img ref={thunder1Ref3} src={thunder1.src}></img>
             <img ref={thunder1Ref4} src={thunder1.src}></img>
+            <img ref={thunder1Ref5} src={thunder1.src}></img>
+            <img ref={thunder1Ref6} src={thunder1.src}></img>
+
+            <img ref={thunder2Ref} src={thunder2.src}></img>
+            <img ref={thunder2Ref2} src={thunder2.src}></img>
+            <img ref={thunder2Ref3} src={thunder2.src}></img>
+            <img ref={thunder2Ref4} src={thunder2.src}></img>
+            <img ref={thunder2Ref5} src={thunder2.src}></img>
+            <img ref={thunder2Ref6} src={thunder2.src}></img>
+
+
           </div>
         </div>
         <img src={alakazam.src} className={styles.img}></img>

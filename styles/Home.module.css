@@ -2,6 +2,7 @@
   background: url("../public/background.png");
   width: 100%;
   min-height: 100vh;
+  background-size: cover;
 }
 
 .page p {
@@ -43,9 +44,10 @@
 
 .img {
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  background: url("../public/mega alakazam.gif");
+  bottom: 1rem;
+  right: 1rem;
+  width: 35%;
+  background-repeat: no-repeat;
 }
 
 .containerShadowball {
@@ -58,6 +60,12 @@
 .shadowBall {
     height: 20em;
     position: relative;
+}
+
+.thunderRings{
+  position: absolute;
+  transform: translate(-95%, -5%);
+
 }
 
 .thunders{

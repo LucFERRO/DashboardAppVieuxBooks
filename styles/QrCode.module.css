@@ -13,9 +13,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     width: 30%;
-    height: 50%;
+    height: 60%;
     border-radius: 10px;
     text-align: center;
 }
