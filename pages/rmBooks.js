@@ -34,7 +34,6 @@ export default function rmBooks() {
 
   async function auFeu(event) {
     const livreList = await apiService.delete(`books/${state._id}`);
-    console.log(livreList);
     getLivres();
   }
 

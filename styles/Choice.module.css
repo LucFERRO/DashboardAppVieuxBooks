@@ -22,6 +22,10 @@
     border-radius: 20px;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 .card img{
     border-radius: 20px;
     object-fit: cover;

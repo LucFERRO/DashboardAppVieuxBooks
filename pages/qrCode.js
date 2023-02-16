@@ -38,7 +38,7 @@ export default function qrCode() {
           <h1>Recuperer le QRCode</h1>
           <select name="_id" onChange={handleChange}>
             <option selected hidden>
-              --Choisissez une adresse--
+              --Choisissez un livre--
             </option>
             {livres.map((livres, index) => {
               return (
@@ -49,12 +49,17 @@ export default function qrCode() {
               );
             })}
           </select>
-          <button>
-            <Link href="/choice">Retour</Link>
-          </button>
-          <button>
+          <div className={styles.row}>
+            <button>
               <Link href="/qrMembre">qrCode personne</Link>
             </button>
+            <button>
+              <Link href="/choice">Retour</Link>
+            </button>
+            <button>
+              <Link href="/qrSpot">qrCode Spot</Link>
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -66,7 +71,7 @@ export default function qrCode() {
         <h1>Recuperer le QRCode</h1>
         <select name="_id" onChange={handleChange}>
           <option selected hidden>
-            --Choisissez une adresse--
+            --Choisissez un livre--
           </option>
           {livres.map((livres, index) => {
             return (
@@ -92,10 +97,18 @@ export default function qrCode() {
             },
           }}
         />
+        <div className={styles.row}>
 
-        <button>
-          <Link href="/choice">Retour</Link>
-        </button>
+          <button>
+            <Link href="/qrMembre">qrCode personne</Link>
+          </button>
+          <button>
+            <Link href="/choice">Retour</Link>
+          </button>
+          <button>
+            <Link href="/qrSpot">qrCode Spot</Link>
+          </button>
+        </div>
       </div>
     </div>
   );

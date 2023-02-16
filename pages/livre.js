@@ -51,7 +51,6 @@ export default function livre() {
 
         </select>
         <input type={"submit"} className={styles.button} onClick={(e) => createBook(e)}></input>
-        {/* <input type='submit' className={styles.button} onClick={createBook}>valider</input> */}
         <button><Link href="/choice">Retour</Link></button>
         </div>
     </div>

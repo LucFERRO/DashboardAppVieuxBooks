@@ -15,7 +15,6 @@ export default function spot() {
 
   async function createSpot(){
     const data = await apiService.post("spots", state);
-    console.log(data.data);
   }
 
   return (
