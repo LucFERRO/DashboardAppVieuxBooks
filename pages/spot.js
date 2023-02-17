@@ -15,6 +15,7 @@ export default function spot() {
 
   async function createSpot(){
     const data = await apiService.post("spots", state);
+    window.location.reload()
   }
 
   return (
