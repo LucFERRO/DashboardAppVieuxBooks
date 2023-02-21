@@ -15,7 +15,7 @@
     align-items: center;
     gap: 1em;
     width: 30%;
-    height: 60%;
+    height: 50%;
     border-radius: 10px;
     text-align: center;
 }
@@ -29,4 +29,10 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.page button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
 }

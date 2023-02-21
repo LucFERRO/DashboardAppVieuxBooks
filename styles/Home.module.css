@@ -40,6 +40,7 @@
   text-align: center;
   padding: 10px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .img {
@@ -75,4 +76,11 @@ position: absolute;
 .thunders > img {
   position: absolute;
   transform: translate(-25%, -35%);
+}
+
+.containerShadowball,
+.shadowBall,
+.thunderRings,
+.thunders {
+  cursor:none;
 }

@@ -53,13 +53,13 @@ export default function qrMembre() {
 
           <div className={styles.row}>
 
-            <button>
+            <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/qrCode">qrCode livre</Link>
             </button>
-            <button>
+            <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/choice">Retour</Link>
             </button>
-            <button>
+            <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/qrSpot">qrCode Spot</Link>
             </button>
           </div>
@@ -102,13 +102,13 @@ export default function qrMembre() {
         />
         <div className={styles.row}>
 
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/qrCode">qrCode livre</Link>
           </button>
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/choice">Retour</Link>
           </button>
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/qrSpot">qrCode Spot</Link>
           </button>
 

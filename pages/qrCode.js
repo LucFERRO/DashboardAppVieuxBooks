@@ -50,13 +50,13 @@ export default function qrCode() {
             })}
           </select>
           <div className={styles.row}>
-            <button>
+            <button style={{"--bg-color": `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/qrMembre">qrCode personne</Link>
             </button>
-            <button>
+            <button style={{"--bg-color": `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/choice">Retour</Link>
             </button>
-            <button>
+            <button style={{"--bg-color": `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
               <Link href="/qrSpot">qrCode Spot</Link>
             </button>
           </div>
@@ -99,17 +99,18 @@ export default function qrCode() {
         />
         <div className={styles.row}>
 
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/qrMembre">qrCode personne</Link>
           </button>
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/choice">Retour</Link>
           </button>
-          <button>
+          <button style={{"--bg-color":  `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
             <Link href="/qrSpot">qrCode Spot</Link>
           </button>
         </div>
       </div>
+      
     </div>
   );
 }
